@@ -40,7 +40,7 @@ The scRNA-seq Analysis Dashboard provides a point-and-click graphical interface 
 ### Clone and install dependencies
 
 ```bash
-git clone https://github.com/shivani-pimparkar/scrnaseq-dashboard.git
+git clone https://github.com/ShivaniPimparkar111/scrnaseq-dashboard.git
 cd scrnaseq-dashboard
 Rscript install_packages.R
 ```
@@ -53,7 +53,7 @@ The installation script will handle all CRAN and Bioconductor dependencies autom
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/shivani-pimparkar/scrnaseq-dashboard.git
+git clone https://github.com/ShivaniPimparkar111/scrnaseq-dashboard.git
 
 # 2. Install dependencies
 Rscript install_packages.R
