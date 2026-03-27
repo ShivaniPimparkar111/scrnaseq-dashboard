@@ -1,0 +1,9 @@
+*.Rhistory
+*.RData
+*.rds
+data/
+.Rproj.user/
+*.log
+*.Rproj
+.DS_Store
+rsconnect/

@@ -1,0 +1,674 @@
+/* ===========================================================================
+   scRNA-seq Dashboard — Custom Stylesheet
+   Author: Shivani Pimparkar
+   =========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   Base & Typography
+   --------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body,
+.content-wrapper,
+.main-sidebar {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 14px;
+  color: #1e2a3a;
+}
+
+/* ---------------------------------------------------------------------------
+   Sidebar
+   --------------------------------------------------------------------------- */
+
+.main-sidebar,
+.left-side {
+  background-color: #1a2035 !important;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+.sidebar-menu > li > a {
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-weight: 500;
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+  padding: 11px 18px 11px 16px;
+  border-left: 3px solid transparent;
+  transition: all 0.22s ease;
+}
+
+.sidebar-menu > li > a:hover {
+  background-color: rgba(33, 150, 243, 0.18) !important;
+  color: #ffffff !important;
+  border-left-color: #2196F3;
+}
+
+.sidebar-menu > li.active > a,
+.sidebar-menu > li.menu-open > a {
+  background-color: rgba(33, 150, 243, 0.28) !important;
+  color: #ffffff !important;
+  border-left: 3px solid #2196F3 !important;
+  font-weight: 600;
+}
+
+.sidebar-menu > li > a > .fa,
+.sidebar-menu > li > a > .glyphicon,
+.sidebar-menu > li > a > svg {
+  color: rgba(255, 255, 255, 0.55);
+  margin-right: 10px;
+  width: 18px;
+  text-align: center;
+  transition: color 0.22s;
+}
+
+.sidebar-menu > li:hover > a > .fa,
+.sidebar-menu > li.active > a > .fa {
+  color: #2196F3;
+}
+
+/* Sidebar header / brand */
+.main-header .logo {
+  background-color: #131926 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+.main-header .navbar {
+  background-color: #1e2d50 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Sidebar footer */
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 14px;
+}
+
+/* ---------------------------------------------------------------------------
+   Content Area
+   --------------------------------------------------------------------------- */
+
+.content-wrapper {
+  background-color: #f0f4f8 !important;
+  min-height: 100vh;
+}
+
+/* ---------------------------------------------------------------------------
+   Boxes / Cards
+   --------------------------------------------------------------------------- */
+
+.box {
+  border-radius: 10px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07) !important;
+  background-color: #ffffff;
+  border-top: none !important;
+  margin-bottom: 20px;
+  transition: box-shadow 0.25s ease;
+}
+
+.box:hover {
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.11) !important;
+}
+
+.box-header {
+  border-radius: 10px 10px 0 0 !important;
+  padding: 13px 18px !important;
+}
+
+.box-header .box-title {
+  font-weight: 600;
+  font-size: 14.5px;
+  letter-spacing: 0.01em;
+}
+
+.box.box-primary > .box-header {
+  background-color: #1565C0 !important;
+  color: #ffffff !important;
+}
+
+.box.box-info > .box-header {
+  background-color: #0288D1 !important;
+  color: #ffffff !important;
+}
+
+.box.box-warning > .box-header {
+  background-color: #F57C00 !important;
+  color: #ffffff !important;
+}
+
+.box.box-danger > .box-header {
+  background-color: #C62828 !important;
+  color: #ffffff !important;
+}
+
+.box.box-success > .box-header {
+  background-color: #2E7D32 !important;
+  color: #ffffff !important;
+}
+
+.box-body {
+  padding: 18px !important;
+}
+
+/* ---------------------------------------------------------------------------
+   Value Boxes
+   --------------------------------------------------------------------------- */
+
+.small-box {
+  border-radius: 10px !important;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.10) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.small-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15) !important;
+}
+
+.small-box h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.small-box p {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------------------------------------------------------------
+   Buttons
+   --------------------------------------------------------------------------- */
+
+.btn {
+  border-radius: 7px !important;
+  font-weight: 500 !important;
+  font-size: 13.5px !important;
+  letter-spacing: 0.01em;
+  transition: all 0.2s ease !important;
+  border: none !important;
+  padding: 8px 18px !important;
+}
+
+.btn-primary {
+  background-color: #1976D2 !important;
+  color: #ffffff !important;
+}
+.btn-primary:hover {
+  background-color: #1565C0 !important;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+.btn-success {
+  background-color: #388E3C !important;
+  color: #ffffff !important;
+}
+.btn-success:hover {
+  background-color: #2E7D32 !important;
+  box-shadow: 0 4px 12px rgba(56, 142, 60, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+.btn-warning {
+  background-color: #F57C00 !important;
+  color: #ffffff !important;
+}
+.btn-warning:hover {
+  background-color: #E65100 !important;
+  box-shadow: 0 4px 12px rgba(245, 124, 0, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background-color: #D32F2F !important;
+  color: #ffffff !important;
+}
+.btn-danger:hover {
+  background-color: #C62828 !important;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+.btn-info {
+  background-color: #0288D1 !important;
+  color: #ffffff !important;
+}
+.btn-info:hover {
+  background-color: #0277BD !important;
+  box-shadow: 0 4px 12px rgba(2, 136, 209, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+.btn-lg {
+  padding: 11px 22px !important;
+  font-size: 15px !important;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+/* Download buttons */
+.btn[id^="download"] {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------------------
+   Form Inputs
+   --------------------------------------------------------------------------- */
+
+.form-control {
+  border-radius: 7px !important;
+  border: 1.5px solid #dce3ed !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13.5px !important;
+  color: #2c3e50 !important;
+  background-color: #fdfdff !important;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  padding: 7px 12px !important;
+}
+
+.form-control:focus {
+  border-color: #2196F3 !important;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.15) !important;
+  outline: none;
+}
+
+label {
+  font-weight: 500 !important;
+  color: #374151 !important;
+  font-size: 13px !important;
+  margin-bottom: 5px;
+}
+
+/* Sliders */
+.irs--shiny .irs-bar {
+  background: #2196F3 !important;
+  border-top-color: #2196F3 !important;
+  border-bottom-color: #2196F3 !important;
+}
+
+.irs--shiny .irs-handle {
+  background: #1565C0 !important;
+  border-color: #1565C0 !important;
+  box-shadow: 0 2px 8px rgba(21, 101, 192, 0.4) !important;
+}
+
+.irs--shiny .irs-single {
+  background: #1976D2 !important;
+}
+
+.irs--shiny .irs-from,
+.irs--shiny .irs-to {
+  background: #1976D2 !important;
+}
+
+/* Radio buttons */
+.radio label,
+.checkbox label {
+  font-weight: 400 !important;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------------------------
+   Tab Panels
+   --------------------------------------------------------------------------- */
+
+.nav-tabs {
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+
+.nav-tabs > li > a {
+  border-radius: 8px 8px 0 0 !important;
+  color: #64748b !important;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 9px 16px;
+  border: none !important;
+  transition: all 0.2s;
+}
+
+.nav-tabs > li > a:hover {
+  background-color: #f1f5f9 !important;
+  color: #1976D2 !important;
+  border-bottom: 2px solid #2196F3 !important;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  border: none !important;
+  border-bottom: 3px solid #2196F3 !important;
+  color: #1565C0 !important;
+  font-weight: 600;
+  background-color: transparent !important;
+}
+
+.tab-content {
+  padding-top: 16px;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------------------------------
+   Tab Title Headers
+   --------------------------------------------------------------------------- */
+
+.tab-title {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: #1a2035 !important;
+  margin-bottom: 4px !important;
+  letter-spacing: -0.01em;
+}
+
+.tab-subtitle {
+  color: #64748b !important;
+  font-size: 14px !important;
+  margin-bottom: 20px !important;
+  margin-top: 0 !important;
+}
+
+/* ---------------------------------------------------------------------------
+   DataTables
+   --------------------------------------------------------------------------- */
+
+.dataTables_wrapper {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px;
+}
+
+table.dataTable thead th {
+  background-color: #f8fafc !important;
+  color: #374151 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0 !important;
+  padding: 10px 12px !important;
+  letter-spacing: 0.01em;
+}
+
+table.dataTable tbody tr {
+  transition: background-color 0.15s;
+}
+
+table.dataTable tbody tr:hover {
+  background-color: #eff6ff !important;
+}
+
+table.dataTable tbody td {
+  padding: 8px 12px !important;
+  border-top: 1px solid #f1f5f9 !important;
+  color: #374151;
+}
+
+.dataTables_filter input {
+  border-radius: 7px !important;
+  border: 1.5px solid #dce3ed !important;
+  padding: 5px 10px !important;
+  font-size: 13px !important;
+}
+
+.dataTables_length select {
+  border-radius: 6px !important;
+  border: 1.5px solid #dce3ed !important;
+  padding: 3px 8px !important;
+}
+
+.paginate_button {
+  border-radius: 6px !important;
+  font-size: 12px !important;
+}
+
+.paginate_button.current,
+.paginate_button.current:hover {
+  background: #2196F3 !important;
+  border-color: #2196F3 !important;
+  color: white !important;
+  border-radius: 6px !important;
+}
+
+/* ---------------------------------------------------------------------------
+   Notifications / Toasts
+   --------------------------------------------------------------------------- */
+
+.shiny-notification {
+  border-radius: 10px !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 500;
+  padding: 14px 20px !important;
+  border-left: 5px solid #2196F3;
+  animation: slideInRight 0.3s ease;
+}
+
+.shiny-notification-message {
+  border-left-color: #2196F3 !important;
+  background-color: #e3f2fd !important;
+  color: #0d47a1 !important;
+}
+
+.shiny-notification-warning {
+  border-left-color: #F57C00 !important;
+  background-color: #fff3e0 !important;
+  color: #e65100 !important;
+}
+
+.shiny-notification-error {
+  border-left-color: #D32F2F !important;
+  background-color: #ffebee !important;
+  color: #b71c1c !important;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(80px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* ---------------------------------------------------------------------------
+   Progress Bar
+   --------------------------------------------------------------------------- */
+
+.shiny-progress-container {
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #2196F3 !important;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  color: #1a2035 !important;
+  font-weight: 500;
+}
+
+/* ---------------------------------------------------------------------------
+   Spinner (shinycssloaders)
+   --------------------------------------------------------------------------- */
+
+.load-container {
+  margin: 40px auto !important;
+}
+
+/* ---------------------------------------------------------------------------
+   Scrollbars
+   --------------------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f4f8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b0bec5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #78909c;
+}
+
+/* Sidebar scrollbar */
+.main-sidebar ::-webkit-scrollbar-track {
+  background: #1a2035;
+}
+
+.main-sidebar ::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* ---------------------------------------------------------------------------
+   Vignette / Markdown
+   --------------------------------------------------------------------------- */
+
+.box-body h1,
+.box-body h2,
+.box-body h3 {
+  color: #1a2035;
+  font-weight: 700;
+}
+
+.box-body h1 { font-size: 22px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+.box-body h2 { font-size: 18px; margin-top: 28px; color: #1565C0; }
+.box-body h3 { font-size: 15px; margin-top: 20px; color: #0288D1; }
+
+.box-body p {
+  line-height: 1.75;
+  color: #374151;
+}
+
+.box-body ul,
+.box-body ol {
+  padding-left: 22px;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.box-body code {
+  background-color: #f1f5f9;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12.5px;
+  color: #be185d;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.box-body pre {
+  background-color: #1e2a3a;
+  border-radius: 8px;
+  padding: 16px 20px;
+  overflow-x: auto;
+  border-left: 4px solid #2196F3;
+}
+
+.box-body pre code {
+  background: none;
+  color: #e2e8f0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.box-body blockquote {
+  border-left: 4px solid #2196F3;
+  background-color: #e3f2fd;
+  padding: 12px 18px;
+  border-radius: 0 8px 8px 0;
+  margin: 14px 0;
+  color: #0d47a1;
+  font-style: normal;
+}
+
+/* ---------------------------------------------------------------------------
+   Filter Summary Box
+   --------------------------------------------------------------------------- */
+
+.filter-summary-box {
+  background-color: #f0fdf4;
+  border: 1.5px solid #86efac;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 6px;
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive tweaks
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .tab-title {
+    font-size: 18px !important;
+  }
+
+  .box-body {
+    padding: 12px !important;
+  }
+
+  .small-box h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Header logo icon alignment
+   --------------------------------------------------------------------------- */
+
+.main-header .logo img {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* ---------------------------------------------------------------------------
+   PickerInput (shinyWidgets)
+   --------------------------------------------------------------------------- */
+
+.bootstrap-select .dropdown-menu {
+  border-radius: 8px !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12) !important;
+  border: 1px solid #e2e8f0 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+}
+
+.bootstrap-select .dropdown-toggle {
+  border-radius: 7px !important;
+  border: 1.5px solid #dce3ed !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13.5px !important;
+}
+
+.bootstrap-select .dropdown-menu li a {
+  padding: 7px 14px !important;
+}
+
+.bootstrap-select .dropdown-menu li.selected a,
+.bootstrap-select .dropdown-menu li a:hover {
+  background-color: #e3f2fd !important;
+  color: #1565C0 !important;
+}
