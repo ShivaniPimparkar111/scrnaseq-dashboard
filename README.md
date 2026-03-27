@@ -55,11 +55,14 @@ The installation script will handle all CRAN and Bioconductor dependencies autom
 # 1. Clone the repository
 git clone https://github.com/ShivaniPimparkar111/scrnaseq-dashboard.git
 
-# 2. Install dependencies
+# 2. Enter the folder
+cd scrnaseq-dashboard
+
+# 3. Install dependencies (takes 15–30 min first time)
 Rscript install_packages.R
 
-# 3. Launch the app
-R -e "shiny::runApp('.')"
+# 4. Launch the app
+R -e "shiny::runApp('.', launch.browser=TRUE)"
 ```
 
 The app will open in your default web browser at `http://127.0.0.1:PORT`.
